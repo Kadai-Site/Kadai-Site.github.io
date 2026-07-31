@@ -1,0 +1,232 @@
+@charset "utf-8";
+body{
+	background-color:#ffffff;
+	color:#333333;
+	font-family: "メイリオ","Hiragino Sans",sans-serif;
+	margin: 0;
+	padding: 0;
+}
+p{
+	font-size: 90%;
+	line-height: 1.8;
+}
+
+h1{
+	font-size: 180%;
+}
+h1-1{
+	font-size: 120%;
+	font-weight: bold;
+}
+h1-2{
+	font-size: 80%;
+}
+
+h2{
+	font-size: 120%;
+	border-bottom: 1px dashed #036;
+	border-left: 10px solid #036;
+	padding-left: 7px;
+}
+
+footer{
+	text-align: center;
+	background-color: #036;
+	color: #ffffff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin: 0;
+}
+
+article{
+	position: relative;
+	clear: both;
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.catch{
+	position: absolute;
+	top: 20px;
+	left: 30px;
+	color: #ffffff;
+	text-shadow: 0px 5px 10px #000;
+	background-color: rgba(0,0,0,0.2);
+	/* width: 600px; */
+}
+
+header{
+	background-color: rgb(61, 69, 99);
+	color: #fff;
+}
+
+ul{
+	list-style-type: none;
+	padding-left: 0
+	font-size 90px;
+	line-height: 1.8
+}
+
+ul time{
+	background-color: #999;
+	color: #fff;
+	border-radius: 10px;
+	font-size: 90%;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-right: 5px;
+
+}
+
+nav ul{
+	font-weight: bold;
+	text-align: right;
+	padding-top: 26px;
+	padding-bottom: 5px;
+	margin: 0;
+}
+
+nav li{
+	display: inline;
+	padding-left: 10px;
+	padding-right: 12px;
+	border-right: 1px solid #fff;
+}
+
+nav ul a:hover{
+	color:#fc0
+}
+
+nav ul a:active{
+	color:#f00
+}
+
+header img {
+	float: left;
+}
+
+.header-in {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.sub-h1 {
+	background: linear-gradient(to left,#fff,#dcdcdc); 
+	padding-top: 5px;
+	padding-left: 10px;
+	border-left: 15px solid #036;
+}
+
+.Tate-Tango{
+display: flex;
+flex-direction: column;/*縦並びにする記述*/
+gap: 10px;	/*単語と単語の間の余白*/
+}
+
+.point-list {
+	border: 1px solid green;
+	list-style-image: url(../image/list.gif);
+	margin-left: 10px;
+	font-weight: bold;
+
+}
+
+.point-img {
+	box-shadow: 0px 0px 10px 3px #aaaa ; #影の大きさの縦、横、広がり幅、さらに広げる幅
+	border-radius: 10px;
+}
+.right-block-text{
+	width: fit-content;/*塊の横幅を文字の長さに合わせる*/
+	padding-left: 30px;/*右側に作りたい空白のサイズ*/
+	text-align: left;/*文字自体は左揃え（省略しても左揃えになります）*/
+}
+
+.sentou{
+	clear: both;
+	text-align: right;
+}
+
+ol li{
+	display: inline;
+	margin-right: 5px;
+	font-size: 80%;
+}
+
+ol{
+	padding-left: 0;
+}
+
+
+/*材料用だー*/
+.ingredient-list {
+  list-style: none; /* 行頭の点を消す */
+  padding: 0;
+  margin: 0;
+  width: 250px; /* 全体の幅を調整 */
+}
+
+.ingredient-list li {
+  display: flex; /* 左右に並べる */
+  justify-content: space-between; /* 左右端に配置 */
+  border-bottom: 1px dotted #ccc; /* 区切り線（任意） */
+  padding: 4px 0;
+}
+
+.ingredient-list .name {
+  text-align: left;
+}
+
+.ingredient-list .amount {
+  text-align: right;
+  width: 60px; /* 数字部分の幅を固定（調整可） */
+}
+
+
+
+
+/* 959px以下の場合 */
+@media (max-width: 959px){
+	header img{
+		float: none;
+	}
+
+	nav ul{
+		text-align: left;
+		padding: 0;
+		margin-left: 10px;
+		border: 1px solid lime;
+	}
+
+	article {
+		width: auto;
+	}
+
+
+	article img{
+		max-width: 100%; #画像の幅を画面の幅にそろえる
+		height: auto;    #画像の比率を維持してる
+	}
+
+	.header-in{
+		width: auto; #メニューの欄の折り返し設定
+	}
+}
+
+/* 600px以下の場合 */
+@media (max-width:600px){ 
+	nav li {
+		font-size: 75%;
+		padding-left: 2px;
+		padding-right: 2px;
+	}
+	footer{
+		font-size: 75%
+	}
+		.catch{
+		top: 5px;
+		left: 10px;
+	}
+
+}
